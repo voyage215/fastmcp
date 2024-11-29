@@ -5,7 +5,7 @@ FastMCP Weather Server Example
 import os
 import httpx
 from pydantic import BaseModel, Field
-from fastmcp.server import FastMCPServer
+from fastmcp.server import FastMCP
 
 # Load env vars
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
@@ -32,7 +32,7 @@ class AlertParams(BaseModel):
 
 
 # Create server
-app = FastMCPServer("weather-service")
+app = FastMCP("weather-service")
 
 
 # Tools using Pydantic models
@@ -126,7 +126,7 @@ def main():
     )
 
     # Run the server
-    asyncio.run(FastMCPServer.run_stdio(app))
+    asyncio.run(FastMCP.run_stdio(app))
 
 
 if __name__ == "__main__":
