@@ -35,7 +35,7 @@ class FastMCPServer:
                 Tool(
                     name=info.name,
                     description=info.description,
-                    inputSchema=info.input_schema,
+                    inputSchema=info.parameters,
                 )
                 for info in tools
             ]
