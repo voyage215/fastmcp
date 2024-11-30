@@ -31,7 +31,7 @@ jobs:
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Install FastMCP
-        run: uv pip install -e ".[dev]" --system
+        run: uv sync
 
       - name: Run tests
         run: pytest -n auto -vv -s
