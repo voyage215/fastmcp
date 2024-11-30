@@ -31,5 +31,5 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Run tests
-        run: uv run pytest -n auto -vv
+        run: uv run pytest -vv
         if: ${{ !(github.event.pull_request.head.repo.fork) }}
